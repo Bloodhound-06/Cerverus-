@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 2078538390}
   - component: {fileID: 2078538389}
   - component: {fileID: 2078538392}
+  - component: {fileID: 2078538393}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -870,3 +871,19 @@ MonoBehaviour:
   movementSpeed: 2
   attackRange: 3
   canAttack: 0
+--- !u!114 &2078538393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078538388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfbce73a6b9965488a78e741b19474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 100
+  player: {fileID: 0}
+  Sc: {fileID: 0}

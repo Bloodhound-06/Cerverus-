@@ -6,8 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     public float currentHP;
     public float maxHP;
+    public GameObject player;
+    public ScoreCounter Sc;
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponents<ScoreCounter>();
         currentHP = maxHP;
     }
 
@@ -25,6 +29,8 @@ public class EnemyHealth : MonoBehaviour
         if(currentHP <= 0)
         {
             Destroy(this.gameObject);
+
+            Sc.IncreaseScore(100);
         }
     }
 }
