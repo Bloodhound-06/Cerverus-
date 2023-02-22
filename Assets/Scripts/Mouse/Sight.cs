@@ -5,11 +5,6 @@ public class Sight : MonoBehaviour
     public GameObject AimPoint;
     public bool customCrosshair;
 
-    private void Start()
-    {
-        customCrosshair = true;
-    }
-
     private void Update()
     {
         if (customCrosshair == false)
@@ -27,7 +22,7 @@ public class Sight : MonoBehaviour
 
     public void CustomCrosshair()
     {
-        AimPoint.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition); //sets aim point to mouse position
+        AimPoint.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0) ; //sets aim point to mouse position
     }
 
     public void CursorLock()
