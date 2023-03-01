@@ -4,33 +4,23 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float currentHP;
-    public float maxHP;
-    public GameObject player;
-    public ScoreCounter Sc;
+    public float currentHP; //the current hp
+    public float maxHP = 30; //the max hp
+    private GameObject player; //the player gameobject
+    //public ScoreCounter Sc;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponents<ScoreCounter>();
-        currentHP = maxHP;
+        player = GameObject.FindGameObjectWithTag("Player"); //sets the player gameobject to the player
+        player.GetComponents<ScoreCounter>(); //sets the scorecounter to the scroecounter
+        currentHP = maxHP; //sets the current hp to max
     }
-
-    private void Update()
+    public void Hit(float damageTaken) //creates the void and a float for the damage the object takes
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Hit(50);
-        }
-    }
+        currentHP -= damageTaken; //removes the damage to the hp
 
-    public void Hit(float damageTaken)
-    {
-        currentHP -= damageTaken;
-        if(currentHP <= 0)
-        {
-            Destroy(this.gameObject);
-
-            Sc.IncreaseScore(100);
-        }
+        if(currentHP <= 0) //if the hp i 0
+            //Sc.IncreaseScore(100); //calls increase score in scorecounter
+            Destroy(this.gameObject); //destroy the gameobject
+            
     }
 }

@@ -11,18 +11,19 @@ public class Sight : MonoBehaviour
         {
             CancelInvoke(); //cancels the invoke
             CustomCrosshair(); //calls cutom crosshair
-            InvokeRepeating("CursorLock", 0, 5); //calls cursor lock
+            InvokeRepeating(nameof(CursorLock), 0, 5); //calls cursor lock
         }
         else
         {
             CancelInvoke(); //cancels the invoke
-            InvokeRepeating("NoCursorLock", 0, 5); //calls no cursor lock
+            InvokeRepeating(nameof(NoCursorLock), 0, 5); //calls no cursor lock
         }
     }
 
     public void CustomCrosshair()
     {
-        AimPoint.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0) ; //sets aim point to mouse position
+        AimPoint.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0) ; 
+        //sets aim point to mouse position
     }
 
     public void CursorLock()
