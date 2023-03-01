@@ -14,6 +14,6 @@ public class ScoreCounter : MonoBehaviour
     public void IncreaseScore(float increase)
     {
         count += increase;
-        text.text = count.ToString();a
+        text.text = count.ToString();
     }
 }
