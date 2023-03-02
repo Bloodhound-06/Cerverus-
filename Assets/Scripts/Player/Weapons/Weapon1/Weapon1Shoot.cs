@@ -37,7 +37,7 @@ public class Weapon1Shoot : MonoBehaviour
         currentBullet = maxBullet; //sets current bullets to max
 
         pm = GameObject.Find("PauseMenu");
-        pmS = pm.GetComponent<PausMenu>();
+        pmS = pm.GetComponent<PausMenu>(); //gets the 
     }
 
     private void Update()

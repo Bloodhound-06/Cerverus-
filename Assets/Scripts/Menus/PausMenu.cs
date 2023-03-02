@@ -5,54 +5,54 @@ using UnityEngine.SceneManagement;
 
 public class PausMenu : MonoBehaviour
 {
-    public KeyCode pauseKey = KeyCode.Escape;
-    public bool paused;
-    public GameObject pauseMenu;
-    readonly string optionsScene;
+    public KeyCode pauseKey = KeyCode.Escape; //the key to escape
+    public bool paused; //is the game paused
+    public GameObject pauseMenu; //the pause menu game object
+    readonly string optionsScene; //the options menu
 
 
     private void Start()
     {
-        UnPause();
-        paused = false;
+        UnPause(); //calls Un Pause
+        paused = false; //sets paused to false
     }
     private void Update()
     {
-        if (Input.GetKeyDown(pauseKey) && paused)
+        if (Input.GetKeyDown(pauseKey) && paused) //if the game is paused and the pause key is pressed
         {
-            UnPause();
+            UnPause(); //calls Un Pause
         }
-        else if (Input.GetKeyDown(pauseKey) && !paused)
+        else if (Input.GetKeyDown(pauseKey) && !paused) //if the game issnt paused and the pause key is pressed
         {
-            Pause();
+            Pause(); //calls pause
         }
     }
 
     public void Resume()
     {
-        UnPause();
+        UnPause(); //calls un pause
     }
 
     public void Options()
     {
-        SceneManager.LoadScene(optionsScene);
+        SceneManager.LoadScene(optionsScene); //sets the scene to options scene
     }
 
-    public void ExitGame()
+    public void ExitGame() 
     {
-        Application.Quit();
+        Application.Quit(); //exits the game
     }
     public void Pause()
     {
-        paused = true;
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        paused = true; //sets paused to true
+        pauseMenu.SetActive(true); //sets the pause menu game object to active
+        Time.timeScale = 0; //stops calculations from scripts
     }
 
     public void UnPause()
     {
-        paused = false;
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        paused = false; //sets paused to fals
+        pauseMenu.SetActive(false); //hides the pause menu game object
+        Time.timeScale = 1; //starts calculations from scripts
     }
 }
