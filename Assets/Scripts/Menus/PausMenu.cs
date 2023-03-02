@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 public class PausMenu : MonoBehaviour
 {
     public KeyCode pauseKey = KeyCode.Escape;
-    readonly bool paused;
+    private bool paused;
     public GameObject pauseMenu;
     readonly string optionsScene;
 
+
+    private void Start()
+    {
+        UnPause();
+        paused = false;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(pauseKey) && paused)
         {
-            Pause();
+            UnPause();
         }
         else if (Input.GetKeyDown(pauseKey) && !paused)
         {
-            UnPause();
+            Pause();
         }
     }
 
@@ -38,12 +44,14 @@ public class PausMenu : MonoBehaviour
     }
     public void Pause()
     {
+        paused = true;
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void UnPause()
     {
+        paused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
