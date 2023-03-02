@@ -1,30 +1,41 @@
 //using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausMenu : MonoBehaviour
 {
-    [Header("Keybinds")]
     public KeyCode pauseKey = KeyCode.Escape;
-
-    [Header("Bools")]
-    private bool paused;
-
-    [Header("Game Objects")]
+    readonly bool paused;
     public GameObject pauseMenu;
+    readonly string optionsScene;
 
     private void Update()
     {
-        if(Input.GetKeyDown(pauseKey) && paused)
+        if (Input.GetKeyDown(pauseKey) && paused)
         {
             Pause();
         }
-        else if(Input.GetKeyDown(pauseKey) && !paused)
+        else if (Input.GetKeyDown(pauseKey) && !paused)
         {
             UnPause();
         }
     }
 
+    public void Resume()
+    {
+        UnPause();
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene(optionsScene);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
     public void Pause()
     {
         pauseMenu.SetActive(true);

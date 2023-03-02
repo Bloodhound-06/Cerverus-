@@ -29,7 +29,6 @@ public class Weapon1Shoot : MonoBehaviour
     [Header("Keybinds")]
     public KeyCode reloadKey; //the keybind to reload
     public KeyCode shootKey; //the keybind to fire
-
     private void Start()
     {
         aimPoint = GameObject.Find("cursor"); //sets the aimpoint
@@ -71,6 +70,8 @@ public class Weapon1Shoot : MonoBehaviour
             hitObject.GetComponent<EnemyHealth>().Hit(10); //gets the healthscript of the hit object
         }
     }
+
+
 
     private void ResetFire()
     {
