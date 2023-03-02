@@ -20,11 +20,12 @@ public class Weapon1Shoot : MonoBehaviour
     [Header("Bools")]
     public bool CanFire; //can the player fire?
 
-    [Header("GameObjects")]
+    [Header("References")]
     public GameObject aimPoint; //the position of where to fire
+    public Transform firePosition; //the position of the gun
+    public GameObject pm; //the pause menu
+    public PausMenu pmS; //the pause menu script
 
-    [Header("Transforms")]
-    public Transform firePosition;
 
     [Header("Keybinds")]
     public KeyCode reloadKey; //the keybind to reload
@@ -34,10 +35,15 @@ public class Weapon1Shoot : MonoBehaviour
         aimPoint = GameObject.Find("cursor"); //sets the aimpoint
         CanFire = true; //set can fire to true
         currentBullet = maxBullet; //sets current bullets to max
+
+        pm = GameObject.Find("PauseMenu");
+        pmS = pm.GetComponent<PausMenu>();
     }
 
     private void Update()
     {
+
+        
         firePoint = new Vector3(firePosition.position.x, firePosition.position.y); //sets the fire point to the firepoint position
         targetPos = aimPoint.transform.position - transform.position; //sets the targeting posiotion to the mouse
 
@@ -89,5 +95,17 @@ public class Weapon1Shoot : MonoBehaviour
     {
         currentBullet = maxBullet; //sets current bullets to max
         CanFire = true; //sets can fire to true
+    }
+
+    private void IsPaused()
+    {
+        if(pmS.paused)
+        {
+            CanFire = false;
+        }
+        else if (!pmS.paused)
+        {
+            CanFire = true;
+        }
     }
 }

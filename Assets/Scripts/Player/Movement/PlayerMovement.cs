@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     public Rigidbody2D rb;
+    public GameObject pm;
+    public PausMenu pmS;
 
     [Header("LookAtMouse")]
     private Vector2 mousePos;
@@ -17,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
         Inputs(); // calls inputs
 
         LookAtMouse(); //calls loock at mouse
+
+        pm = GameObject.Find("PauseMenu");
+        pmS = pm.GetComponent<PausMenu>();
     }
 
     private void FixedUpdate()
@@ -40,7 +45,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void LookAtMouse()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //gets the voctor from the middle of screen to the cursor
-        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y); //rotates the player to the previous vector
+        if (!pmS.paused)
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //gets the voctor from the middle of screen to the cursor
+            transform.up = mousePos - new Vector2(transform.position.x, transform.position.y); //rotates the player to the previous vector
+        }
     }
 }
