@@ -1074,6 +1074,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1361603446}
     m_Modifications:
+    - target: {fileID: 7988723001954123876, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723001954123876, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723001954123878, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723001954123878, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1890578686, guid: fc5dabb8fb62a0847882bd35e2bca7a8, type: 3}
+    - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -2052435487, guid: fc5dabb8fb62a0847882bd35e2bca7a8, type: 3}
+    - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 609946134, guid: fc5dabb8fb62a0847882bd35e2bca7a8, type: 3}
     - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1102,6 +1130,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7988723002099907788, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002100363567, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -231476436, guid: b830ff3044e070247977afc1a5574a9a, type: 3}
+    - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1333876978, guid: b830ff3044e070247977afc1a5574a9a, type: 3}
     - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1130,6 +1178,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933211, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933211, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933285, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002705933285, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1929013953, guid: b830ff3044e070247977afc1a5574a9a, type: 3}
+    - target: {fileID: 7988723002997232617, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002997232617, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -395951360, guid: 1c8947d605f0362499441222c4ca4be9, type: 3}
+    - target: {fileID: 7988723002997232620, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Name
+      value: Resume Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -625010866, guid: 1c8947d605f0362499441222c4ca4be9, type: 3}
+    - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: -418914134, guid: 1c8947d605f0362499441222c4ca4be9, type: 3}
     - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1157,6 +1245,18 @@ PrefabInstance:
     - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002997232623, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723002997232623, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988723003189014982, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7988723003261954942, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_Pivot.x
