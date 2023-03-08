@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     
     private void LookAtMouse()
-    {
+    {   
         if (!pmS.paused) //if the game is not paused
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //gets the voctor from the middle of screen to the cursor

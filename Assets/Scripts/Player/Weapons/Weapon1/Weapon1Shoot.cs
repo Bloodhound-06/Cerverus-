@@ -6,10 +6,9 @@ public class Weapon1Shoot : MonoBehaviour
 {
 
     [Header("Private")]
-    private GameObject hitObject; //the game object that gets hit by the raycast
     private Vector3 targetPos; //the position of the mouse
     private Vector3 firePoint; //the origin of the raycast
-
+    private Vector3 distance;
 
     [Header("Floats")]
     public float fireDelay; //the delay between when you can fire
@@ -22,8 +21,9 @@ public class Weapon1Shoot : MonoBehaviour
 
     [Header("References")]
     public GameObject aimPoint; //the position of where to fire
-    public Transform firePosition; //the position of the gun
+    public GameObject hitObject; //the game object that gets hit by the raycast
     public GameObject pm; //the pause menu
+    public Transform firePosition; //the position of the gun
     public PausMenu pmS; //the pause menu script
 
 
@@ -42,12 +42,11 @@ public class Weapon1Shoot : MonoBehaviour
 
     private void Update()
     {
-
-        
+        distance = firePoint - targetPos;
         firePoint = new Vector3(firePosition.position.x, firePosition.position.y); //sets the fire point to the firepoint position
         targetPos = aimPoint.transform.position - transform.position; //sets the targeting posiotion to the mouse
 
-        Debug.DrawRay(firePoint, targetPos * 1000, Color.red); //draws a red line in the editor where the raycast is
+        Debug.DrawRay(firePoint, targetPos, Color.red); //draws a red line in the editor where the raycast is
 
         if (Input.GetKeyDown(shootKey) && CanFire == true) //is the shoot key pressed down
         {
@@ -64,10 +63,12 @@ public class Weapon1Shoot : MonoBehaviour
         }
 
     }
+
+    
     private void Shoot()
     {
         currentBullet--; //removes one bullet from current bullets
-        RaycastHit2D hit = Physics2D.Raycast(firePoint, targetPos, 1000); //creates a raycast from player to aimpoint
+        RaycastHit2D hit = Physics2D.Raycast(firePoint, targetPos); //creates a raycast from player to aimpoint
 
         if (hit.collider != null && hit.collider.CompareTag("Enemy")) //if the raycast hits and if the hit target is a enemy
         {
@@ -102,7 +103,7 @@ public class Weapon1Shoot : MonoBehaviour
         if(pmS.paused)
         {
             CanFire = false;
-        }
+        } 
         else if (!pmS.paused)
         {
             CanFire = true;
