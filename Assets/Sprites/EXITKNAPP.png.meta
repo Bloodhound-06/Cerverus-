@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b830ff3044e070247977afc1a5574a9a
+guid: 1c7ac23d08c855e41b1a2940e86b6cd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EXITBUTTON_0
+      name: EXITKNAPP_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24153dbc88933b94084190cd3e2ecaa0
-      internalID: 1929013953
+      spriteID: 283e99ca27a560b4d9bb2527b76eee3b
+      internalID: 1179437994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EXITBUTTON_1
+      name: EXITKNAPP_1
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e4693cf07e3d13488dd0fcea5d42c20
-      internalID: -231476436
+      spriteID: 453cb1360a157d94fb4930628ad51534
+      internalID: 806114823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EXITBUTTON_2
+      name: EXITKNAPP_2
       rect:
         serializedVersion: 2
         x: 0
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6935a6aa111c1844396d6daf2e5b6cb7
-      internalID: 1333876978
+      spriteID: 7be438f920d27b6448f87ae277bd4870
+      internalID: 1063222410
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EXITBUTTON_0: 1929013953
-      EXITBUTTON_1: -231476436
-      EXITBUTTON_2: 1333876978
+      EXITKNAPP_1: 806114823
+      EXITKNAPP_0: 1179437994
+      EXITKNAPP_2: 1063222410
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
