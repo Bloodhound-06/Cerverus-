@@ -571,10 +571,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fde58f6d9d1f454584e49999f6447c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: {fileID: 2008831409, guid: a6cc56a022fd3d446aaea5f5d970506c, type: 3}
-  down: {fileID: -1025684565, guid: a6cc56a022fd3d446aaea5f5d970506c, type: 3}
-  left: {fileID: 284036543, guid: a6cc56a022fd3d446aaea5f5d970506c, type: 3}
-  right: {fileID: 1172184239, guid: a6cc56a022fd3d446aaea5f5d970506c, type: 3}
+  up: {fileID: -372284647, guid: c0cbecb1081febe4d9101296664e2de5, type: 3}
+  down: {fileID: 1917319808, guid: c0cbecb1081febe4d9101296664e2de5, type: 3}
+  left: {fileID: -1405647304, guid: c0cbecb1081febe4d9101296664e2de5, type: 3}
+  right: {fileID: 1641408026, guid: c0cbecb1081febe4d9101296664e2de5, type: 3}
   SpriteRenderer: {fileID: 1013335098}
   player: {fileID: 1184546590}
 --- !u!1 &1054821922
@@ -1342,6 +1342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554873713599285052, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 795739855, guid: 874fb6e21eab3734b88709e4f67531e7, type: 3}
     - target: {fileID: 554873713599285053, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
       propertyPath: m_RootOrder
       value: 7
