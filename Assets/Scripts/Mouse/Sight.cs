@@ -3,20 +3,19 @@ using UnityEngine;
 public class Sight : MonoBehaviour
 {
     public GameObject AimPoint;
-    public bool customCrosshair;
+    public PausMenu pm;
 
     private void Update()
     {
-        if (customCrosshair == false)
+        if (!pm.paused)
         {
-            CancelInvoke(); //cancels the invoke
-            CustomCrosshair(); //calls cutom crosshair
-            InvokeRepeating(nameof(CursorLock), 0, 5); //calls cursor lock
+            CustomCrosshair(); //calls custom croshair
+            CursorLock(); //calls cursor lock
         }
         else
         {
             CancelInvoke(); //cancels the invoke
-            InvokeRepeating(nameof(NoCursorLock), 0, 5); //calls no cursor lock
+            NoCursorLock(); //calls no cursor lock
         }
     }
 
