@@ -13657,6 +13657,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1361603446}
     m_Modifications:
+    - target: {fileID: 7988723001954123878, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1518253349, guid: 8b4a2dccce345994da73661a9a79c054, type: 3}
+    - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 1590816606, guid: 8b4a2dccce345994da73661a9a79c054, type: 3}
+    - target: {fileID: 7988723001954123879, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1704317493, guid: 8b4a2dccce345994da73661a9a79c054, type: 3}
+    - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 601654337, guid: 82a070880b29fb7409d83957cb8a1487, type: 3}
+    - target: {fileID: 7988723002705933210, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1105440559, guid: 82a070880b29fb7409d83957cb8a1487, type: 3}
+    - target: {fileID: 7988723002705933285, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1994395215, guid: 82a070880b29fb7409d83957cb8a1487, type: 3}
+    - target: {fileID: 7988723002997232617, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -667170065, guid: 6a9334ad3b00e8d47bedda1338e24b3d, type: 3}
+    - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -1261565831, guid: 6a9334ad3b00e8d47bedda1338e24b3d, type: 3}
+    - target: {fileID: 7988723002997232622, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 237957625, guid: 6a9334ad3b00e8d47bedda1338e24b3d, type: 3}
     - target: {fileID: 7988723003261954942, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
