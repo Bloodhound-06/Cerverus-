@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10481a8aa56d2a9478ec15c104c46638
+guid: 9037dba66cb6bd0488a6a0cfcbccee0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,64 +116,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HEALTHBAR_0
+      name: GAMEOVER_EXIT_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 297
-        width: 110
-        height: 46
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d6e2f105c08774f8074678e917c372
-      internalID: -1771332093
+      spriteID: c17eff04ae9524d4f9f0b4c359718a5e
+      internalID: -965398264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HEALTHBAR_1
+      name: GAMEOVER_EXIT_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 185
-        width: 94
-        height: 14
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a03e1b24c7b96148bdaf69aa6cbf827
-      internalID: -1983340382
+      spriteID: fe89205e0c280cb40b67cefa97633be1
+      internalID: -1798277582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HEALTHBAR_2
+      name: GAMEOVER_EXIT_2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 57
-        width: 94
-        height: 14
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc0cf5d3504544459c85774de52bf78
-      internalID: 2070642270
+      spriteID: 827fb234363e6b64eaf83e1ab39b1053
+      internalID: 1316763126
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HEALTHBAR_2: 2070642270
-      HEALTHBAR_1: -1983340382
-      HEALTHBAR_0: -1771332093
+      GAMEOVER_EXIT_1: -1798277582
+      GAMEOVER_EXIT_0: -965398264
+      GAMEOVER_EXIT_2: 1316763126
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
