@@ -8,7 +8,7 @@ public class PausMenu : MonoBehaviour
     public KeyCode pauseKey = KeyCode.Escape; //the key to escape
     public bool paused; //is the game paused
     public GameObject pauseMenu; //the pause menu game object
-    readonly string optionsScene; //the options menu
+    public string optionsScene; //the options menu
 
 
     private void Start()
