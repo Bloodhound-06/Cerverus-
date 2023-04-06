@@ -27539,22 +27539,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 554873713599285040, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
-      propertyPath: m_Size.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 554873713599285040, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
-      propertyPath: m_Size.y
-      value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 554873713599285040, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 554873713599285040, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 554873713599285053, guid: cac8a603cb9640b4192e1f50a7c8238f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -27612,10 +27596,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 519420032, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2609776206460875345, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -27684,14 +27664,6 @@ PrefabInstance:
       propertyPath: pmS
       value: 
       objectReference: {fileID: 1390113116}
-    - target: {fileID: 7432217168983344804, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432217169842277058, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
 --- !u!1001 &7988723001890757157
@@ -27788,10 +27760,6 @@ PrefabInstance:
     - target: {fileID: 7988723003261954943, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
       propertyPath: m_Name
       value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988723003261954943, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}

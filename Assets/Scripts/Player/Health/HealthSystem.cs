@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class HealthSystem : MonoBehaviour
 
         if(currentHealth < 0) //if hp = 0
         {
-            //death //die
+            SceneManager.LoadScene(2);
         }
     }
 }
