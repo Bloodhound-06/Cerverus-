@@ -27644,6 +27644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7432217168654629184, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1048252249}
     - target: {fileID: 7432217168654629186, guid: 026fd1acaeb9a6148968f71520cfaa0c, type: 3}
       propertyPath: pm
       value: 
