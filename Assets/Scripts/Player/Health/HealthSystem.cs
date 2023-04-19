@@ -7,18 +7,18 @@ using UnityEngine.SceneManagement;
 public class HealthSystem : MonoBehaviour
 {
     public float currentHealth, MaxHealth = 100;
-    //public Slider slider;
+    public Slider slider;
 
     private void Start()
     {
         currentHealth = MaxHealth; //set hp to max
-        //slider.maxValue = MaxHealth; //set slider max to max hp
+        slider.maxValue = MaxHealth; //set slider max to max hp
     }
 
-    /*public void Update()
+    public void Update()
     {
         slider.value = currentHealth; //set slider value to hp
-    }*/
+    }
 
     public void Heal(float heal)
     {
