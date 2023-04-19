@@ -6,21 +6,18 @@ public class MovingSpawner : MonoBehaviour
 {
     private void Start()
     {
-        transform.position = new Vector3(12f, 11.5f);
+        transform.position = new Vector3(-12f, 11.5f);
         MoveDown();
     }
 
     public void MoveDown()
     {
-        while (transform.position.y != 0)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-15.5f,11.5f), 5 * Time.deltaTime);
-        }
-        MoveRight();
+        
+        //MoveRight();
     }
-    public void MoveRight()
+    /*public void MoveRight()
     {
-        while (transform.position.x != 0)
+        if (transform.position.x != 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector3(-15.5f, -10.5f), 5 * Time.deltaTime);
         }
@@ -28,7 +25,7 @@ public class MovingSpawner : MonoBehaviour
     }
     public void MoveUp()
     {
-        while (transform.position.y != 0)
+        if (transform.position.y != 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector3(12f, -10.5f), 5 * Time.deltaTime);
         }
@@ -36,10 +33,10 @@ public class MovingSpawner : MonoBehaviour
     }
     public void MoveLeft()
     {
-        while (transform.position.x != 0)
+        if (transform.position.x != 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector3(12f, 11.5f), 5 * Time.deltaTime);
         }
         MoveDown();
     }
-}
+*/}
