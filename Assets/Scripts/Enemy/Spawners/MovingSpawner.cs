@@ -4,39 +4,41 @@ using UnityEngine;
 
 public class MovingSpawner : MonoBehaviour
 {
+    [Header("Transforms")]
+    public Transform sl1;
+    public Transform sl2;
+    public Transform sl3;
+    public Transform sl4;
+    public GameObject enemy1;
+    [Header("Variables")]
+    public float randomNumber;
     private void Start()
     {
-        transform.position = new Vector3(-12f, 11.5f);
-        MoveDown();
+        InvokeRepeating("ChooseSpawn", 2f, 40f);
+        InvokeRepeating("ChooseSpawn", 4f, 40f);
+        InvokeRepeating("ChooseSpawn", 6f, 40f);
+        InvokeRepeating("ChooseSpawn", 8f, 40f);
     }
 
-    public void MoveDown()
+    public void ChooseSpawn()
     {
-        
-        //MoveRight();
-    }
-    /*public void MoveRight()
-    {
-        if (transform.position.x != 0)
+        randomNumber = Random.Range(1, 4);
+
+        if (randomNumber == 1)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-15.5f, -10.5f), 5 * Time.deltaTime);
+            Instantiate(enemy1, sl1);
         }
-        MoveUp();
-    }
-    public void MoveUp()
-    {
-        if (transform.position.y != 0)
+        else if (randomNumber == 2)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(12f, -10.5f), 5 * Time.deltaTime);
+            Instantiate(enemy1, sl2);
         }
-        MoveLeft();
-    }
-    public void MoveLeft()
-    {
-        if (transform.position.x != 0)
+        else if (randomNumber == 3)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(12f, 11.5f), 5 * Time.deltaTime);
+            Instantiate(enemy1, sl3);
         }
-        MoveDown();
+        else if (randomNumber == 4)
+        {
+            Instantiate(enemy1, sl4);
+        }
     }
-*/}
+}

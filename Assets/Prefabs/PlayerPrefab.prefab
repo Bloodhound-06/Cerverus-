@@ -270,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 50
   MaxHealth: 100
+  slider: {fileID: 0}
 --- !u!114 &7432217168654629186
 MonoBehaviour:
   m_ObjectHideFlags: 0
