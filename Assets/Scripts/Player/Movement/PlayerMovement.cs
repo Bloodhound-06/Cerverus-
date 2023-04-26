@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb; //the ridgidbody on the player
     public GameObject pm; //the pausemenu game object
     public PausMenu pmS; //the pausemenu script
+    public Animator animator;
     private void Update()
     {
         Inputs(); // calls inputs
@@ -33,6 +34,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
+        if (movement.x != 0)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        }
+        else
+        {
+            animator.SetFloat("Speed", Mathf.Abs(movement.y));
+        }
+        
+
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement); //moves the player to the wanted position
     }
 }
