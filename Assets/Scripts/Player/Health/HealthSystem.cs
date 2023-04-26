@@ -34,7 +34,7 @@ public class HealthSystem : MonoBehaviour
     {
         currentHealth -= damage; //remove dmg from hp
 
-        if(currentHealth < 0) //if hp = 0
+        if(currentHealth < 1) //if hp is less than 1
         {
             SceneManager.LoadScene(2);
         }

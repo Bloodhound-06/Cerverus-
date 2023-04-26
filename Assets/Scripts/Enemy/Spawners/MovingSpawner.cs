@@ -12,12 +12,13 @@ public class MovingSpawner : MonoBehaviour
     public GameObject enemy1;
     [Header("Variables")]
     public float randomNumber;
+    public float spawnedEnemies;
     private void Start()
     {
-        InvokeRepeating("ChooseSpawn", 2f, 40f);
-        InvokeRepeating("ChooseSpawn", 4f, 40f);
-        InvokeRepeating("ChooseSpawn", 6f, 40f);
-        InvokeRepeating("ChooseSpawn", 8f, 40f);
+        InvokeRepeating(nameof(ChooseSpawn), 5f, 20f);
+        InvokeRepeating(nameof(ChooseSpawn), 10f, 20f);
+        InvokeRepeating(nameof(ChooseSpawn), 15f, 20f);
+        InvokeRepeating(nameof(ChooseSpawn), 20f, 20f);
     }
 
     public void ChooseSpawn()
@@ -40,5 +41,12 @@ public class MovingSpawner : MonoBehaviour
         {
             Instantiate(enemy1, sl4);
         }
+        spawnedEnemies++;
+
+        if (spawnedEnemies == 10)
+        {
+            InvokeRepeating(nameof(ChooseSpawn), 2f, 20f);
+        }
+
     }
 }
