@@ -87,10 +87,10 @@ public class Weapon1Shoot : MonoBehaviour
         currentBullet--; //removes one bullet from current bullets
         AmmoCounter(); //calls ammo counter
         RaycastHit2D hit = Physics2D.Raycast(firePoint, targetPos, 1000); //creates a raycast from player to aimpoint
+        Debug.Log(hit.collider.name); //writes the name of the hit target
 
         if (hit.collider != null && hit.collider.CompareTag("Enemy")) //if the raycast hits and if the hit target is a enemy
         {
-            Debug.Log(hit.collider.name); //writes the name of the hit target
             hitObject = GameObject.Find(hit.collider.name); //gets the gameobject of the hit object
             hitObject.GetComponent<EnemyHealth>().Hit(10); //gets the healthscript of the hit object
         }

@@ -6,11 +6,12 @@ public class TakeDamage : MonoBehaviour
 {
     public HealthSystem hps;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.CompareTag("Enemy"))
+        if (collision.gameObject.tag == "Enemy")
         {
             hps.Damage(10);
         }
     }
+
 }
