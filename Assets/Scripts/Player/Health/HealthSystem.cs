@@ -8,6 +8,9 @@ public class HealthSystem : MonoBehaviour
 {
     public float currentHealth, MaxHealth = 100;
     public Slider slider;
+    public Animator animator;
+    public PlayerMovement playerMovement;
+    public bool isDead =false;
 
     private void Start()
     {
@@ -32,11 +35,27 @@ public class HealthSystem : MonoBehaviour
 
     public void Damage(float damage)
     {
+
         currentHealth -= damage; //remove dmg from hp
+        animator.SetBool("TakeDamage", true);
+        Invoke(nameof(ResetAnimation), 0.5f); //inokes reset animation ín 0.5 seconds
 
         if(currentHealth < 1) //if hp is less than 1
         {
-            SceneManager.LoadScene(2);
+            isDead = true; //sets isDead to true
+            animator.SetBool("Die", true); //sets the animators bool: die to true
+            Invoke(nameof(ChangeGameOverScene), 1.2f);
         }
+    }
+
+    public void ResetAnimation()
+    {
+        animator.SetBool("TakeDamage", false); //sets the animators bool: take damage to flase
+    }
+
+    public void ChangeGameOverScene()
+    {
+        SceneManager.LoadScene(2); // loads scene 2
+
     }
 }

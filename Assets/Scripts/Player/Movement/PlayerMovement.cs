@@ -11,9 +11,19 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pm; //the pausemenu game object
     public PausMenu pmS; //the pausemenu script
     public Animator animator;
+    public HealthSystem hps;
     private void Update()
     {
-        Inputs(); // calls inputs
+        if (hps.isDead != true)
+        {
+            Inputs(); // calls inputs
+        }
+        else
+        {
+            movement.x = 0;
+            movement.y = 0;
+        }
+        
 
         pm = GameObject.Find("PauseMenu");
         pmS = pm.GetComponent<PausMenu>();
