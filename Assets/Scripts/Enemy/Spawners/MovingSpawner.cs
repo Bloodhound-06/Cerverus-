@@ -12,7 +12,7 @@ public class MovingSpawner : MonoBehaviour
     public GameObject enemy1;
     [Header("Variables")]
     public float randomNumber;
-    public float spawnedEnemies;
+    public float spawnedEnemies; 
     public float Repeaters = 4;
     private void Start()
     {

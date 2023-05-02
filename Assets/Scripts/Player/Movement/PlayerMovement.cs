@@ -17,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
         if (hps.isDead != true)
         {
             Inputs(); // calls inputs
+            ReverseAnimation();
         }
         else
         {
             movement.x = 0;
             movement.y = 0;
+            
         }
         
 
@@ -55,5 +57,20 @@ public class PlayerMovement : MonoBehaviour
         
 
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement); //moves the player to the wanted position
+    }
+
+    public void ReverseAnimation()
+    {
+        Vector3 charachterScale = transform.localScale;
+        if(Input.GetAxisRaw("Horizontal") < 0)
+        {
+            charachterScale.x = -1;
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            charachterScale.x = 1;
+        }
+
+        transform.localScale = charachterScale;
     }
 }
