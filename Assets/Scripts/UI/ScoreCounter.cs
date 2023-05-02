@@ -5,15 +5,21 @@ using TMPro;
 public class ScoreCounter : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public float count = 0;
+    public float Score;
+
+
     private void Start()
     {
-        text.text = count.ToString();
+        Score = 0;
     }
 
-    public void IncreaseScore(float increase)
+    private void Update()
     {
-        count += increase;
-        text.text = count.ToString();
+        text.text = Score.ToString();
+    }
+
+    public void ScoreIncrease(float increase)
+    {
+        Score += increase;
     }
 }

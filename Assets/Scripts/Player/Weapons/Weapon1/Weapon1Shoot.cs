@@ -71,7 +71,7 @@ public class Weapon1Shoot : MonoBehaviour
         }
 
 
-        if (Input.GetKey(reloadKey)) //if the reload key is pressed
+        if (Input.GetKey(reloadKey) && currentBullet != 30) //if the reload key is pressed and the ammo issnt full
         {
             currentBullet = 0; //sets the current bullets to 0
             CanFire = false; //sets can fire to false
@@ -130,9 +130,9 @@ public class Weapon1Shoot : MonoBehaviour
 
     private void Reload()
     {
-        currentBullet = maxBullet; //sets current bullets to max
-        CanFire = true; //sets can fire to true
-        AmmoCounter(); // calls ammo counter
+            currentBullet = maxBullet; //sets current bullets to max
+            CanFire = true; //sets can fire to true
+            AmmoCounter(); // calls ammo counter
     }
 
     private void IsPaused()

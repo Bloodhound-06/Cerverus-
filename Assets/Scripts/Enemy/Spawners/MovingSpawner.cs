@@ -13,6 +13,7 @@ public class MovingSpawner : MonoBehaviour
     [Header("Variables")]
     public float randomNumber;
     public float spawnedEnemies;
+    public float Repeaters = 4;
     private void Start()
     {
         InvokeRepeating(nameof(ChooseSpawn), 5f, 20f);
@@ -43,9 +44,11 @@ public class MovingSpawner : MonoBehaviour
         }
         spawnedEnemies++;
 
-        if (spawnedEnemies == 10)
+        if (spawnedEnemies == 5)
         {
             InvokeRepeating(nameof(ChooseSpawn), 2f, 20f);
+            spawnedEnemies = 0;
+            Repeaters++;
         }
 
     }
