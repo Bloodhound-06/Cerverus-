@@ -44,7 +44,7 @@ public class HealthSystem : MonoBehaviour
         {
             isDead = true; //sets isDead to true
             animator.SetBool("Die", true); //sets the animators bool: die to true
-            Invoke(nameof(ChangeGameOverScene), 1.2f);
+            Invoke(nameof(ChangeGameOverScene), 1.2f); //change game over scene in 1.2 seconds
         }
     }
 

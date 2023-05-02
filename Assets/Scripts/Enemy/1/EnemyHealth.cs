@@ -7,13 +7,14 @@ public class EnemyHealth : MonoBehaviour
     public float currentHP; //the current hp
     public float maxHP = 30; //the max hp
     public GameObject player; //the player gameobject
-    public GameObject Es;
-    public ScoreCounter Sc;
+    public GameObject Es; //The event system Gameobject
+    public ScoreCounter Sc; //the scorecounter Script
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player"); //sets the player gameobject to the player
         Es = GameObject.FindGameObjectWithTag("EventSystem"); //sets the player gameobject to the event system
         Sc = Es.GetComponent<ScoreCounter>(); //sets the Score counter to the score counter
+        maxHP = Random.Range(1, 60); //sets the max Hp between 1 and 60
         currentHP = maxHP; //sets the current hp to max
     }
     public void Hit(float damageTaken) //creates the void and a float for the damage the object takes
@@ -22,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
 
         if(currentHP <= 0)//if the hp i 0
         {
-            Sc.ScoreIncrease(100); //calls increase score in scorecounter
+            Sc.ScoreIncrease(maxHP*10); //calls increase score in scorecounter
             Destroy(this.gameObject); //destroy the gameobject
         }
             

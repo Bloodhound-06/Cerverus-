@@ -8,6 +8,6 @@ public class MovementSprite : MonoBehaviour
     public Transform player;
     private void Update()
     {
-        transform.position = player.position;
+        transform.position = player.position; //moves this game object to the player
     }
 }

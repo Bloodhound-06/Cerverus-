@@ -8,7 +8,7 @@ public class OptionsMenu : MonoBehaviour
     public string returnScene = "returnScene"; 
     public void ReturnButton()
     {
-        SceneManager.LoadScene(returnScene);
+        SceneManager.LoadScene(returnScene); //returns to last scene
         
     }
 

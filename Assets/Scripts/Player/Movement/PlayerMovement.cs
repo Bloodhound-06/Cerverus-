@@ -17,18 +17,18 @@ public class PlayerMovement : MonoBehaviour
         if (hps.isDead != true)
         {
             Inputs(); // calls inputs
-            ReverseAnimation();
+            ReverseAnimation(); // calls reverse animation
         }
         else
         {
-            movement.x = 0;
-            movement.y = 0;
+            movement.x = 0; // sets movement x to 0
+            movement.y = 0; // sets movement y to 0
             
         }
         
 
-        pm = GameObject.Find("PauseMenu");
-        pmS = pm.GetComponent<PausMenu>();
+        pm = GameObject.Find("PauseMenu"); // sets pm to pausemenu
+        pmS = pm.GetComponent<PausMenu>(); // sets pms to the pausemenu script
     }
 
     private void FixedUpdate()
@@ -46,13 +46,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        if (movement.x != 0)
+        if (movement.x != 0) // if movement x issnt 0
         {
-            animator.SetFloat("Speed", Mathf.Abs(movement.x));
+            animator.SetFloat("Speed", Mathf.Abs(movement.x)); // sets the animator float speed to movement x
         }
-        else
+        else // else
         {
-            animator.SetFloat("Speed", Mathf.Abs(movement.y));
+            animator.SetFloat("Speed", Mathf.Abs(movement.y)); // sets the animator float speed to movement y
         }
         
 
@@ -61,16 +61,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void ReverseAnimation()
     {
-        Vector3 charachterScale = transform.localScale;
-        if(Input.GetAxisRaw("Horizontal") < 0)
+        Vector3 charachterScale = transform.localScale; // creates charachterscale and sets it to transform localscale
+
+        if(Input.GetAxisRaw("Horizontal") < 0) //if input axis horizontal is less than 0
         {
-            charachterScale.x = -1;
+            charachterScale.x = -1; // sets the charachter x scale to -1
         }
-        else if (Input.GetAxisRaw("Horizontal") > 0)
+        else if (Input.GetAxisRaw("Horizontal") > 0) // if input axis horizontal is more than 0
         {
-            charachterScale.x = 1;
+            charachterScale.x = 1; // sets the charachter x scale to 1
         }
 
-        transform.localScale = charachterScale;
+        transform.localScale = charachterScale; // sets the local scale to characheter scale
     }
 }

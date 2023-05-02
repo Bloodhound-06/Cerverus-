@@ -93,7 +93,7 @@ public class Weapon1Shoot : MonoBehaviour
         {
             /*hitObject = GameObject.Find(hit.collider.name); //gets the gameobject of the hit object
             hitObject.GetComponent<EnemyHealth>().Hit(10); //gets the healthscript of the hit object*/
-            hit.collider.gameObject.GetComponent<EnemyHealth>().Hit(10);
+            hit.collider.gameObject.GetComponent<EnemyHealth>().Hit(10); //gets the health script of the hit enemy and calls hit with a 10
         }
     }
 

@@ -10,16 +10,16 @@ public class ScoreCounter : MonoBehaviour
 
     private void Start()
     {
-        Score = 0;
+        Score = 0; //sets score to 0
     }
 
     private void Update()
     {
-        text.text = Score.ToString();
+        text.text = Score.ToString(); // sets the text to the score amount
     }
 
     public void ScoreIncrease(float increase)
     {
-        Score += increase;
+        Score += increase; //increases core by increase
     }
 }

@@ -8,9 +8,9 @@ public class TakeDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy")) //if the player colides with an object withe the enemy tag
         {
-            hps.Damage(10);
+            hps.Damage(10); //invokes Damager inside the health system script for 10
         }
     }
 
