@@ -50,6 +50,5 @@ public class MovingSpawner : MonoBehaviour
             spawnedEnemies = 0; //sets spawned enemies to 0
             Repeaters++; //adds 1 to repeaters
         }
-
     }
 }
