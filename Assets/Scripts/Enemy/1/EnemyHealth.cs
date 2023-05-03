@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
 
         if(currentHP <= 0)//if the hp i 0
         {
-            Sc.ScoreIncrease(maxHP*10); //calls increase score in scorecounter
+            Sc.ScoreIncrease(maxHP); //calls increase score in scorecounter
             Destroy(this.gameObject); //destroy the gameobject
         }
             

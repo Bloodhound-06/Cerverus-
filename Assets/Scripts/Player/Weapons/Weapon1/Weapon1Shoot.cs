@@ -80,7 +80,6 @@ public class Weapon1Shoot : MonoBehaviour
         }
 
     }
-
     
     private void Shoot()
     {
@@ -91,8 +90,6 @@ public class Weapon1Shoot : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Enemy")) //if the raycast hits and if the hit target is a enemy
         {
-            /*hitObject = GameObject.Find(hit.collider.name); //gets the gameobject of the hit object
-            hitObject.GetComponent<EnemyHealth>().Hit(10); //gets the healthscript of the hit object*/
             hit.collider.gameObject.GetComponent<EnemyHealth>().Hit(10); //gets the health script of the hit enemy and calls hit with a 10
         }
     }
