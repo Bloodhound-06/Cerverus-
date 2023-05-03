@@ -28245,5 +28245,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7993475059639877966, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}
+      propertyPath: optionsScene
+      value: OptionsMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14cc759d2d83f7f4fae81eb4cdad3d30, type: 3}

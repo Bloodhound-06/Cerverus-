@@ -16,10 +16,17 @@ public class MovingSpawner : MonoBehaviour
     public float Repeaters = 4; //the float for the numbers of repeaters
     private void Start()
     {
-        InvokeRepeating(nameof(ChooseSpawn), 5f, 20f); //invokes Choose Spawn in 5 seconds and repeating every 20 seconds
-        InvokeRepeating(nameof(ChooseSpawn), 10f, 20f); //invokes Choose Spawn in 10 seconds and repeating every 20 seconds
-        InvokeRepeating(nameof(ChooseSpawn), 15f, 20f); //invokes Choose Spawn in 15 seconds and repeating every 20 seconds
-        InvokeRepeating(nameof(ChooseSpawn), 20f, 20f); //invokes Choose Spawn in 20 seconds and repeating every 20 seconds
+        InvokeRepeating(nameof(ChooseSpawn), 5f, 20f); 
+        //invokes Choose Spawn in 5 seconds and repeating every 20 seconds
+
+        InvokeRepeating(nameof(ChooseSpawn), 10f, 20f); 
+        //invokes Choose Spawn in 10 seconds and repeating every 20 seconds
+
+        InvokeRepeating(nameof(ChooseSpawn), 15f, 20f); 
+        //invokes Choose Spawn in 15 seconds and repeating every 20 seconds
+
+        InvokeRepeating(nameof(ChooseSpawn), 20f, 20f); 
+        //invokes Choose Spawn in 20 seconds and repeating every 20 seconds
     }
 
     public void ChooseSpawn()

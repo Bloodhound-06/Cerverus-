@@ -40,7 +40,7 @@ public class PausMenu : MonoBehaviour
 
     public void ExitGame() 
     {
-        Application.Quit(); //exits the game
+        SceneManager.LoadScene("MainMenu");
     }
     public void Pause()
     {
