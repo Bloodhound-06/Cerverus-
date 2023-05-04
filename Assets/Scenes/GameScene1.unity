@@ -333,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1751661746}
   Score: 0
+  highScore: 0
 --- !u!1 &478897936
 GameObject:
   m_ObjectHideFlags: 0
