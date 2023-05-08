@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1291970621}
     m_Modifications:
+    - target: {fileID: 7122106326095501701, guid: 4cacbf00c608f614681df9a5984b8a6c, type: 3}
+      propertyPath: m_text
+      value: Alfred Ahl
+      objectReference: {fileID: 0}
     - target: {fileID: 7122106326300801598, guid: 4cacbf00c608f614681df9a5984b8a6c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 750
@@ -229,6 +233,10 @@ PrefabInstance:
     - target: {fileID: 7122106327351763559, guid: 4cacbf00c608f614681df9a5984b8a6c, type: 3}
       propertyPath: m_Name
       value: ScoreText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122106327421295622, guid: 4cacbf00c608f614681df9a5984b8a6c, type: 3}
+      propertyPath: m_text
+      value: = Gay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cacbf00c608f614681df9a5984b8a6c, type: 3}

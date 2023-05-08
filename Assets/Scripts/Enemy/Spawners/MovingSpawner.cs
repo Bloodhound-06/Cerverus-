@@ -14,6 +14,7 @@ public class MovingSpawner : MonoBehaviour
     public float randomNumber; //the float for the random number
     public float spawnedEnemies; //the float of enemies spawned
     public float Repeaters = 4; //the float for the numbers of repeaters
+    public float addRepeater = 20; 
     private void Start()
     {
         InvokeRepeating(nameof(ChooseSpawn), 5f, 20f); 
@@ -51,7 +52,7 @@ public class MovingSpawner : MonoBehaviour
         }
         spawnedEnemies++; //adds 1 to spawned enemies
 
-        if (spawnedEnemies == 5) //if 5 enemies has been spanwed
+        if (spawnedEnemies == addRepeater) //if 5 enemies has been spanwed
         {
             InvokeRepeating(nameof(ChooseSpawn), 2f, 20f); //invokes choose spawn
             spawnedEnemies = 0; //sets spawned enemies to 0

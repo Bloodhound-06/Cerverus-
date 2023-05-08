@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class ScoreCounter : MonoBehaviour
 {
     public TextMeshProUGUI text;
@@ -21,6 +23,12 @@ public class ScoreCounter : MonoBehaviour
         if (PlayerPrefs.GetFloat("LatestScore") >= PlayerPrefs.GetFloat("HighScore"))
         {
             PlayerPrefs.SetFloat("HighScore", Score);
+        }
+
+        if (Score == 69 && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Space))
+        {
+            Cursor.visible = true;
+            SceneManager.LoadScene("EasterEgg1");
         }
     }
 
