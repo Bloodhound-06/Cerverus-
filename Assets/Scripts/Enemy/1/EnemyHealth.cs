@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [Header("Variables")]
     public float currentHP; //the current hp
     public float maxHP = 30; //the max hp
+
+    [Header("References")]
     public GameObject player; //the player gameobject
     public GameObject Es; //The event system Gameobject
     public ScoreCounter Sc; //the scorecounter Script
+    public GameObject EnemyParent; //the paranet of this enemy
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player"); //sets the player gameobject to the player
@@ -24,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHP <= 0)//if the hp i 0
         {
             Sc.ScoreIncrease(maxHP); //calls increase score in scorecounter
-            Destroy(this.gameObject); //destroy the gameobject
+            Destroy(EnemyParent); //destroy the gameobject
         }
             
     }
