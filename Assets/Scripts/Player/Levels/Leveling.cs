@@ -5,13 +5,24 @@ using UnityEngine;
 public class Leveling : MonoBehaviour
 {
     
-    public float damageLevel, healthLevel, armorLevel;
+    public float damageLevel = 0, healthLevel = 0, armorLevel = 0;
 
     private void Start()
     {
-        damageLevel = PlayerPrefs.GetFloat("damageLevel");
-        healthLevel = PlayerPrefs.GetFloat("healthLevel");
-        armorLevel = PlayerPrefs.GetFloat("armorLevel");
+        if (PlayerPrefs.GetFloat("damageLevel") != 0)
+        {
+            damageLevel = PlayerPrefs.GetFloat("damageLevel");
+        }
+
+        if (PlayerPrefs.GetFloat("healthLevel") != 0)
+        {
+            healthLevel = PlayerPrefs.GetFloat("healthLevel");
+        }
+        
+        if (PlayerPrefs.GetFloat("armorLevel") != 0)
+        {
+            armorLevel = PlayerPrefs.GetFloat("armorLevel");
+        }
     }
     public void IncreaseDamage(float value)
     {
