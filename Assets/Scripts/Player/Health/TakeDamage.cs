@@ -10,7 +10,7 @@ public class TakeDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy")) //if the player colides with an object withe the enemy tag
         {
-            hps.Damage(10); //invokes Damager inside the health system script for 10
+            hps.Damage(10/PlayerPrefs.GetFloat("armorLevel")); //invokes Damager inside the health system script for 10
         }
     }
 

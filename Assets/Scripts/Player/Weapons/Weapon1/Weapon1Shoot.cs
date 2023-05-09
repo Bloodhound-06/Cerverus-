@@ -15,7 +15,6 @@ public class Weapon1Shoot : MonoBehaviour
     public float maxBullet; //the amount of bullets in a full magazine
     public float currentBullet; //the amount of bullet remaining in the magazine
     public float reloadTime; //the time it takes to reload
-    
 
     [Header("Bools")]
     public bool CanFire; //can the player fire?
@@ -29,7 +28,6 @@ public class Weapon1Shoot : MonoBehaviour
     public Transform firePosition; //the position of the gun
     public PausMenu pmS; //the pause menu script
     public TextMeshProUGUI ammoCounter; //the game object of the ammo counter text
-
 
     [Header("Keybinds")]
     public KeyCode reloadKey; //the keybind to reload
@@ -90,7 +88,7 @@ public class Weapon1Shoot : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Enemy")) //if the raycast hits and if the hit target is a enemy
         {
-            hit.collider.gameObject.GetComponent<EnemyHealth>().Hit(10); //gets the health script of the hit enemy and calls hit with a 10
+            hit.collider.gameObject.GetComponent<EnemyHealth>().Hit(10 * PlayerPrefs.GetFloat("damageLevel")); //gets the health script of the hit enemy and calls hit with a 10
         }
     }
 

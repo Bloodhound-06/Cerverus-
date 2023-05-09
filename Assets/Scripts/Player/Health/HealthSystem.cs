@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
+    [Header("Valuables")]
     public float currentHealth, MaxHealth = 100;
+    public bool isDead =false;
+
+    [Header("Refferences")]
     public Slider slider;
     public Animator animator;
     public PlayerMovement playerMovement;
-    public bool isDead =false;
+
 
     private void Start()
     {
-        currentHealth = MaxHealth; //set hp to max
+        currentHealth = MaxHealth * PlayerPrefs.GetFloat("healthLevel"); //set hp to max
         slider.maxValue = MaxHealth; //set slider max to max hp
     }
 
