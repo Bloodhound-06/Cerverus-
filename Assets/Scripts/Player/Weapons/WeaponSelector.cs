@@ -5,35 +5,26 @@ using UnityEngine;
 public class WeaponSelector : MonoBehaviour
 {
     public Weapon1Shoot w1s;
-    public Weapon2Shoot w2s;
+    public float debugFloat;
 
     private void Start()
     {
-        Weapon1();
+        PlayerPrefs.SetFloat("SelectedWeapon", 1);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Weapon1();
+            PlayerPrefs.SetFloat("SelectedWeapon", 1);
+            w1s.AmmoCounter();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Weapon2();
+            PlayerPrefs.SetFloat("SelectedWeapon", 2);
+            w1s.AmmoCounter();
         }
-    }
 
-    public void Weapon1()
-    {
-        w1s.enabled = true;
-        w2s.enabled = false;
+        debugFloat = PlayerPrefs.GetFloat("SelectedWeapon");
     }
-
-    public void Weapon2()
-    {
-        w1s.enabled = false;
-        w2s.enabled = true;
-    }
-
 }
