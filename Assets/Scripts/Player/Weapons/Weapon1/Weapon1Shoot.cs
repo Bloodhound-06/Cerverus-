@@ -13,7 +13,7 @@ public class Weapon1Shoot : MonoBehaviour
     [Header("Floats")]
     public float fireDelay; //the delay between when you can fire
     public float maxBullet; //the amount of bullets in a full magazine
-    public float currentBullet1, currentBullet2; //the amount of bullet remaining in the magazine
+    public float currentBullet; //the amount of bullet remaining in the magazine
     public float reloadTime; //the time it takes to reload
     public float fireDelay2 = 2; //the delay between when you can fire weapon number 2
 
@@ -44,8 +44,8 @@ public class Weapon1Shoot : MonoBehaviour
         GunLaser = GameObject.Find("Laser"); //gets the laser
         aimPoint = GameObject.Find("cursor"); //sets the aimpoint
         CanFire = true; //set can fire to true
-        currentBullet1 = maxBullet; //sets current bullets to max
-        currentBullet2 = maxBullet; //sets current bullets to max
+        currentBullet = maxBullet; //sets current bullets to max
+        currentBullet = maxBullet; //sets current bullets to max
 
         pm = GameObject.Find("PauseMenu"); //gets the pause menu
         pmS = pm.GetComponent<PausMenu>(); //gets the pause menu script
@@ -68,9 +68,9 @@ public class Weapon1Shoot : MonoBehaviour
 
             }
 
-            if (Input.GetKey(reloadKey) && currentBullet1 != 30) //if the reload key is pressed and the ammo issnt full
+            if (Input.GetKey(reloadKey) && currentBullet != 30) //if the reload key is pressed and the ammo issnt full
             {
-                currentBullet1 = 0; //sets the current bullets to 0
+                currentBullet = 0; //sets the current bullets to 0
                 CanFire = false; //sets can fire to false
                 AmmoCounter(); //calls Ammo counter
                 Invoke(nameof(Reload), reloadTime); //calls reload with a delay
@@ -85,9 +85,9 @@ public class Weapon1Shoot : MonoBehaviour
                 Invoke(nameof(ResetFire), fireDelay2); //calls reset fire on a delay
             }
 
-            if (Input.GetKeyDown(reloadKey) && currentBullet2 != 30) // if the reload key is pressed and the amount of bullets
+            if (Input.GetKeyDown(reloadKey) && currentBullet != 30) // if the reload key is pressed and the amount of bullets
             {
-                currentBullet2 = 0; //sets the current bullets to 0
+                currentBullet = 0; //sets the current bullets to 0
                 CanFire = false; //sets can fire to false
                 AmmoCounter(); //calls Ammo counter
                 Invoke(nameof(Reload2), reloadTime); //calls reload with a delay
@@ -103,7 +103,7 @@ public class Weapon1Shoot : MonoBehaviour
     {
         if (PlayerPrefs.GetFloat("SelectedWeapon") == 1)
         {
-            currentBullet1--; //removes one bullet from current bullets
+            currentBullet--; //removes one bullet from current bullets
             AmmoCounter(); //calls ammo counter
             RaycastHit2D hit = Physics2D.Raycast(firePoint, targetPos, 1000); //creates a raycast from player to aimpoint
             Debug.Log(hit.collider.name); //writes the name of the hit target
@@ -116,8 +116,8 @@ public class Weapon1Shoot : MonoBehaviour
         else if (PlayerPrefs.GetFloat("SelectedWeapon") == 2) //if the current weapon selekted is 2
         {
             Instantiate(Weapon2Bullet, firePoint2.position, player2.rotation);
+            currentBullet -= 3;
             AmmoCounter();
-            currentBullet2 -= 3;
             Invoke(nameof(ResetFire), fireDelay2);
         }
     }
@@ -132,21 +132,16 @@ public class Weapon1Shoot : MonoBehaviour
     {
         LaserOff(); //calls laser off
 
-        if (currentBullet1 <= 0) //if current bullets are less than 1
+        if (currentBullet <= 0) //if current bullets are less than 1
         {
             CanFire = false; //sets can fire to false
-            canFire2 = false;
-        }
-        else if (currentBullet2 <= 0)
-        {
-            CanFire = false; //sets can fire to false
-            canFire2 = false;
+            canFire2 = false; //sets can fire to false
         }
         else
 
         {
             CanFire = true; //sets can fire to true
-            canFire2 = true;
+            canFire2 = true; //sets can fire to true
         }
     }
 
@@ -163,16 +158,17 @@ public class Weapon1Shoot : MonoBehaviour
 
     public void Reload()
     {
-        currentBullet1 = maxBullet; //sets current bullets to max
+        currentBullet = maxBullet; //sets current bullets to max
         CanFire = true; //sets can fire to true
         AmmoCounter(); // calls ammo counter
     }
 
     public void Reload2()
     {
-        currentBullet2 = maxBullet; //sets current bullets to max
+        currentBullet = maxBullet; //sets current bullets to max
         CanFire = true; //sets can fire to true
         AmmoCounter(); // calls ammo counter
+        ResetFire();
     }
 
     private void IsPaused()
@@ -189,52 +185,25 @@ public class Weapon1Shoot : MonoBehaviour
 
     public void AmmoCounter()
     {
-        if (PlayerPrefs.GetFloat("SelectedWeapon") == 1)
+        if (currentBullet == 0) //if current bullets are 0
         {
-            if (currentBullet1 == 0) //if current bullets are 0
-            {
-                ammoCounter.color = Color.red; //sets the text color to red
-                ammoCounter.text = ("Empty"); // sets the text to empty
-            }
-            else if (currentBullet1 < 6 && currentBullet1 > 0)
-            {
-                ammoCounter.color = Color.red; //sets the color to red
-                ammoCounter.text = currentBullet1.ToString(); //sets the text to the amount of remaining bullets
-            }
-            else if (currentBullet1 < 11 && currentBullet1 > 5)
-            {
-                ammoCounter.color = Color.yellow; //sets the color to yellow
-                ammoCounter.text = currentBullet1.ToString(); //sets the text to the amount of remaining bullets
-            }
-            else
-            {
-                ammoCounter.color = Color.white; //sets the color to white
-                ammoCounter.text = currentBullet1.ToString(); //sets the text to the amount of remaining bullets
-            }
+            ammoCounter.color = Color.red; //sets the text color to red
+            ammoCounter.text = ("Empty"); // sets the text to empty
         }
-
-        if (PlayerPrefs.GetFloat("SelectedWeapon") == 2)
+        else if (currentBullet < 6 && currentBullet > 0)
         {
-            if (currentBullet2 == 0) //if current bullets are 0
-            {
-                ammoCounter.color = Color.red; //sets the text color to red
-                ammoCounter.text = ("Empty"); // sets the text to empty
-            }
-            else if (currentBullet2 < 6 && currentBullet2 > 0)
-            {
-                ammoCounter.color = Color.red; //sets the color to red
-                ammoCounter.text = currentBullet2.ToString(); //sets the text to the amount of remaining bullets
-            }
-            else if (currentBullet2 < 11 && currentBullet2 > 5)
-            {
-                ammoCounter.color = Color.yellow; //sets the color to yellow
-                ammoCounter.text = currentBullet2.ToString(); //sets the text to the amount of remaining bullets
-            }
-            else
-            {
-                ammoCounter.color = Color.white; //sets the color to white
-                ammoCounter.text = currentBullet2.ToString(); //sets the text to the amount of remaining bullets
-            }
+            ammoCounter.color = Color.red; //sets the color to red
+            ammoCounter.text = currentBullet.ToString(); //sets the text to the amount of remaining bullets
+        }
+        else if (currentBullet < 11 && currentBullet > 5)
+        {
+            ammoCounter.color = Color.yellow; //sets the color to yellow
+            ammoCounter.text = currentBullet.ToString(); //sets the text to the amount of remaining bullets
+        }
+        else
+        {
+            ammoCounter.color = Color.white; //sets the color to white
+            ammoCounter.text = currentBullet.ToString(); //sets the text to the amount of remaining bullets
         }
     }
 }
